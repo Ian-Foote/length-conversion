@@ -17,7 +17,7 @@ class Length:
         self.unit = unit
 
     def __str__(self):
-        return '{} {}'.format(self.value, self.unit.short_string)
+        return '{:.4g} {}'.format(self.value, self.unit.short_string)
 
     def as_unit(self, new_unit):
         new_value = self.value / self.unit.conversion_factor

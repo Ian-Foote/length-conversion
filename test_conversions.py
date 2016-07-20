@@ -12,7 +12,7 @@ units = sampled_from(Lengths)
 def test_str(value, unit):
     length = Length(value, unit)
 
-    assert str(length) == '{} {}'.format(value, unit.short_string)
+    assert str(length) == '{:.4g} {}'.format(value, unit.short_string)
 
 
 @given(value=values, old_unit=units, new_unit=units)
