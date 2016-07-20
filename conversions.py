@@ -18,3 +18,8 @@ class Length:
 
     def __str__(self):
         return '{} {}'.format(self.value, self.unit.short_string)
+
+    def as_unit(self, new_unit):
+        new_value = self.value / self.unit.conversion_factor
+        new_value *= new_unit.conversion_factor
+        return Length(new_value, new_unit)
