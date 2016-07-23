@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class Lengths(Enum):
+class LengthUnit(Enum):
     METRE = 1, 'm'
     YARD = 1.094, 'yd'
     INCH = 39.37, 'in'

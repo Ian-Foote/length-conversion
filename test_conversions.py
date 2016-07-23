@@ -1,11 +1,11 @@
 from hypothesis import given
 from hypothesis.strategies import floats, sampled_from
 
-from conversions import Length, Lengths
+from conversions import Length, LengthUnit
 
 
 values = floats(allow_nan=False, allow_infinity=False)
-units = sampled_from(Lengths)
+units = sampled_from(LengthUnit)
 
 
 @given(value=values, unit=units)
